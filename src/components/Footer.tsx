@@ -84,7 +84,7 @@ export default function Footer() {
                 }}
                 className="hover:text-white transition-colors"
               >
-                //{link.label}
+                {"//"}{link.label}
               </a>
             ))}
           </nav>

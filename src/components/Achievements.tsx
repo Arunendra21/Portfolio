@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GitPullRequest, GitFork, Star, Flame, Calendar, BookOpen } from "lucide-react";
+import { GitPullRequest, GitFork, Flame, Calendar, BookOpen } from "lucide-react";
 
 interface Achievement {
   id: string;

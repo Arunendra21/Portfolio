@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, Download, Sparkles, Award } from "lucide-react";
+import { motion } from "framer-motion";
+import { Download, Sparkles } from "lucide-react";
 import Image from "next/image";
 
 // Rotating typewriter subtitles
@@ -88,7 +88,6 @@ export default function Hero() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationFrameId: number;
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
@@ -338,7 +337,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="font-mono text-base sm:text-2xl text-cyber-emerald/90 flex items-center tracking-widest min-h-[40px]"
             >
-              <span>// </span>
+              <span>{"// "}</span>
               <span className="ml-2 font-bold">{subText}</span>
               <span className="ml-1 w-2.5 h-6 bg-cyber-emerald animate-pulse inline-block" />
             </motion.div>
