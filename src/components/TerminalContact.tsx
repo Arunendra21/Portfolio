@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Terminal, Send, Copy, CheckCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Terminal, Send, Copy, CheckCircle, X } from "lucide-react";
 
 export default function TerminalContact() {
   const [formData, setFormData] = useState({ name: "", email: "", msg: "" });
   const [sending, setSending] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [logs, setLogs] = useState<string[]>([
     "Transceiver offline.",
     "Awaiting client input packets...",
@@ -60,6 +61,8 @@ export default function TerminalContact() {
           `TRANSMISSION_COMPLETE: Message successfully sent!`,
         ]);
         setFormData({ name: "", email: "", msg: "" });
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 6000);
       } else {
         throw new Error("Transmission link disrupted.");
       }
@@ -140,6 +143,7 @@ export default function TerminalContact() {
                   <input
                     type="text"
                     name="name"
+                    required
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Enter your name..."
@@ -154,6 +158,7 @@ export default function TerminalContact() {
                   <input
                     type="email"
                     name="email"
+                    required
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Enter your email address..."
@@ -162,12 +167,13 @@ export default function TerminalContact() {
                 </div>
 
                 <div className="flex flex-col space-y-1.5 text-left w-full">
-                  <label className="text-[9px] text-zinc-500 font-mono tracking-wider uppercase">
+                  <label className="text-[9px] text-zinc-550 font-mono tracking-wider uppercase">
                     [03] PACKET_MESSAGE:
                   </label>
                   <textarea
                     name="msg"
                     rows={4}
+                    required
                     value={formData.msg}
                     onChange={handleInputChange}
                     placeholder="Type your message details here..."
@@ -284,6 +290,39 @@ export default function TerminalContact() {
           </div>
         </div>
       </div>
+
+      {/* Sci-fi Glassmorphic Success Toast Popup */}
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            transition={{ type: "spring", damping: 25, stiffness: 350 }}
+            className="fixed bottom-6 right-6 z-[99999] max-w-sm sm:max-w-md p-5 rounded-2xl border border-emerald-500/30 bg-[#0d0d12]/90 backdrop-blur-md shadow-[0_12px_40px_rgba(16,185,129,0.15)] flex gap-4 select-none font-sans text-left"
+          >
+            <div className="p-2 rounded-xl bg-emerald-950/30 border border-emerald-500/20 text-emerald-400 self-start">
+              <CheckCircle className="w-5 h-5 animate-bounce" />
+            </div>
+            
+            <div className="flex-grow space-y-1">
+              <h4 className="font-bold text-sm text-white tracking-wide uppercase">
+                TRANSMISSION COMPLETE
+              </h4>
+              <p className="text-[10px] sm:text-xs text-zinc-400 leading-relaxed font-mono">
+                [SUCCESS]: Message successfully routed to communications array. Arunendra will receive your coordinates shortly.
+              </p>
+            </div>
+
+            <button
+              onClick={() => setShowPopup(false)}
+              className="p-1 rounded-lg hover:bg-zinc-900 border border-transparent hover:border-zinc-800 text-zinc-500 hover:text-white transition-all self-start"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
