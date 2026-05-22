@@ -39,16 +39,39 @@ export default function TerminalContact() {
       `Encrypting packet payloads (AES-256)...`,
     ]);
 
-    // Simulate connection delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://formspree.io/f/xwvzbpyj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.msg,
+        }),
+      });
 
-    setLogs((prev) => [
-      ...prev,
-      `Connecting to mail servers...`,
-      `TRANSMISSION_COMPLETE: Message successfully sent!`,
-    ]);
-    setFormData({ name: "", email: "", msg: "" });
-    setSending(false);
+      if (response.ok) {
+        setLogs((prev) => [
+          ...prev,
+          `Connecting to mail servers...`,
+          `TRANSMISSION_COMPLETE: Message successfully sent!`,
+        ]);
+        setFormData({ name: "", email: "", msg: "" });
+      } else {
+        throw new Error("Transmission link disrupted.");
+      }
+    } catch (err) {
+      setLogs((prev) => [
+        ...prev,
+        `ERROR: Transmission gateway failed.`,
+        `Please email coordinates manually.`,
+      ]);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
