@@ -17,16 +17,16 @@ const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     id: 1,
     company: "Dciphers IT Solutions",
-    role: "Network & Security Engineer Intern",
+    role: "Software Engineer Intern",
     location: "Noida, India",
     duration: "May 2026 – Present",
     points: [
-      "Configured and hardened enterprise network architectures, implementing firewalls, VPN tunnels, and IDS/IPS systems.",
-      "Performed vulnerability testing and threat assessments to secure system infrastructures against cyber hazards.",
-      "Optimized routing protocols and traffic shaping patterns to guarantee high network availability and secure data transmission.",
-      "Integrated SIEM log analysis systems to facilitate real-time monitoring and swift incident response.",
+      "Designed and built highly performant, responsive web interfaces and microservice architectures.",
+      "Optimized backend API payloads and formulated structured indexing schemas to accelerate query processing.",
+      "Constructed end-to-end continuous integration pipelines to automate containerized application deployments.",
+      "Collaborated on scalable data workflows, system topology metrics, and algorithmic design schemes.",
     ],
-    icon: <Shield className="w-4 h-4 text-indigo-400" />,
+    icon: <Cpu className="w-4 h-4 text-blue-400" />,
   },
   {
     id: 2,

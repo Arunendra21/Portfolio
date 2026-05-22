@@ -40,9 +40,9 @@ I specialize in constructing low-latency, scalable full-stack applications, conf
 
 ## 💼 Career Chronology & Research Internships
 
-* **Dciphers IT Solutions** — *Network & Security Engineer Intern* (May 2026 – Present)
-  * Hardened enterprise network perimeters, configured robust firewalls, site-to-site VPN tunnels, and IDS/IPS modules.
-  * Formulated vulnerability audits and automated log aggregation schemas using SIEM metrics.
+* **Dciphers IT Solutions** — *Software Engineer Intern* (May 2026 – Present)
+  * Designed and built highly performant, responsive web interfaces and microservice architectures.
+  * Optimized backend API payloads and formulated structured indexing schemas to accelerate query processing.
 * **IIIT Vadodara** — *Research Intern* (Jan 2026 – Present)
   * Designed data processing pipelines and accelerated storage query indexing schemes.
 * **NIT Warangal** — *Research Intern* (Dec 2025 – Jan 2026)

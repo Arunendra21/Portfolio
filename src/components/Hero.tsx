@@ -234,11 +234,11 @@ export default function Hero() {
             <div class="section-title">RESEARCH & WORK EXPERIENCE</div>
             <div class="exp-item" style="margin-top: 10px;">
               <div class="item-header">
-                <span>Dciphers IT Solutions - Network & Security Engineer Intern</span>
+                <span>Dciphers IT Solutions - Software Engineer Intern</span>
                 <span>May 2026 - Present</span>
               </div>
-              <div>• Configured and hardened enterprise network architectures, implementing firewalls, VPN tunnels, and IDS/IPS systems.</div>
-              <div>• Conducted vulnerability threat testing and implemented SIEM log monitoring workflows.</div>
+              <div>• Designed and built highly performant, responsive web interfaces and microservice architectures.</div>
+              <div>• Optimized backend API payloads and formulated structured indexing schemas to accelerate query processing.</div>
             </div>
             
             <div class="exp-item">
