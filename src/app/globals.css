@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #030308;
+  --foreground: #f3f4f6;
+  --glow-cyan: rgba(0, 240, 255, 0.4);
+  --glow-purple: rgba(185, 35, 255, 0.4);
+}
+
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Slim Glowing Cybernetic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030308;
+  border-left: 1px solid rgba(0, 240, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f0ff, #b923ff);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+/* Custom Selection Highlight */
+::selection {
+  background: rgba(0, 240, 255, 0.3);
+  color: #ffffff;
+  text-shadow: 0 0 5px #00f0ff;
+}
+
+/* Cybernetic Glassmorphic Panel Card */
+.cyber-card {
+  position: relative;
+  background: rgba(8, 8, 21, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cyber-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Interactive Cyber Corner Tech Tabs */
+.tech-corner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #00f0ff;
+  border-right: 2px solid #00f0ff;
+  pointer-events: none;
+}
+
+.tech-corner::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #b923ff;
+  border-left: 2px solid #b923ff;
+  pointer-events: none;
+}
+
+/* Glowing Neon Text */
+.text-neon-cyan {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.text-neon-purple {
+  text-shadow: 0 0 10px rgba(185, 35, 255, 0.5), 0 0 20px rgba(185, 35, 255, 0.2);
+}
+
+.text-neon-emerald {
+  text-shadow: 0 0 10px rgba(0, 255, 179, 0.5), 0 0 20px rgba(0, 255, 179, 0.2);
+}
+
+/* Futuristic Scanline Overlay */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+/* Cybernetic Grid Scroll Layer */
+.bg-grid-lines {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Hologram Glow Grid Dot */
+.bg-dot-matrix {
+  background-size: 20px 20px;
+  background-image: radial-gradient(rgba(0, 240, 255, 0.08) 1px, transparent 1px);
+}
+
+
+
+/* Digital Grid Lines decoration */
+.grid-decor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(0, 240, 255, 0.1);
+  pointer-events: none;
+}
+
+.grid-decor-h {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.2), transparent);
+  pointer-events: none;
+}
+
+.grid-decor-v {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(0, 240, 255, 0.2), transparent);
+  pointer-events: none;
+}
+
+/* CSS Glitch Hover Trigger */
+.hover-glitch:hover {
+  animation: glitch 0.3s linear infinite;
+}
