@@ -34,7 +34,7 @@ I specialize in constructing low-latency, scalable full-stack applications, conf
 * **Tagline**: *AI-Powered Research Publications Companion*
 * **Core Stack**: React.js, Tailwind CSS, GCP, Google Gemini Flash API, Pinecone VectorDB, Node.js
 * **Overview**: Digests dense research publications, generates context-aware abstracts and vector semantic indices, and builds custom dynamic testing suites.
-* **Live Preview**: [ScholarSynth Platform]
+* **Live Preview**: https://aistudio.google.com/apps/drive/1KavXJLrbgQnzL56VmelhStJONZk1w8uw?showAssistant=true&showPreview=true&fullscreenApplet=true
 
 ---
 
