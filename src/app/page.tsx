@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Preloader from "@/components/Preloader";
+import ScrollProgress from "@/components/ScrollProgress";
 import CustomCursor from "@/components/CustomCursor";
 import GlowingMouseTrail from "@/components/GlowingMouseTrail";
 import Navbar from "@/components/Navbar";
@@ -33,6 +34,9 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative min-h-screen bg-cyber-black text-foreground selection:bg-cyber-cyan/30"
           >
+            {/* Scroll-driven neon progress rail */}
+            <ScrollProgress />
+
             {/* Butter-Smooth Custom Cyber-Cursor follower (Desktop only) */}
             <CustomCursor />
 

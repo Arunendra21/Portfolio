@@ -61,7 +61,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
+            className="aurora-text heading-underline font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
           >
             About Arunendra
           </motion.h2>
@@ -78,7 +78,7 @@ export default function About() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="p-6 rounded-2xl border border-zinc-800/80 bg-[#0d0d12]/75 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
+              className="sheen card-glow p-6 rounded-2xl border border-zinc-800/80 bg-[#0d0d12]/75 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
             >
               <h3 className="font-semibold text-white tracking-wide text-lg mb-4 flex items-center gap-2">
                 <span>Academic Overview</span>
@@ -141,7 +141,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="p-5 rounded-2xl border border-zinc-800 bg-[#0d0d12]/60 hover:border-zinc-700/80 transition-all duration-300 hover:scale-[1.02] flex flex-col justify-start space-y-4 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] shadow-inner text-left"
+                className="sheen card-glow p-5 rounded-2xl border border-zinc-800 bg-[#0d0d12]/60 hover:border-zinc-700/80 transition-all duration-300 hover:scale-[1.02] flex flex-col justify-start space-y-4 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] shadow-inner text-left"
               >
                 <div className="p-2.5 rounded-lg bg-zinc-900/60 border border-zinc-850 w-fit">
                   {str.icon}

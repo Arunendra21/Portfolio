@@ -105,7 +105,7 @@ export default function TerminalContact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
+            className="aurora-text heading-underline font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
           >
             Establish Contact
           </motion.h2>
@@ -123,7 +123,7 @@ export default function TerminalContact() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="p-6 sm:p-8 rounded-2xl border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md flex-grow flex flex-col justify-between shadow-2xl w-full"
+              className="card-glow p-6 sm:p-8 rounded-2xl border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md flex-grow flex flex-col justify-between shadow-2xl w-full"
             >
               {/* Form header */}
               <div className="flex justify-between items-center border-b border-zinc-900 pb-3 mb-6">
@@ -214,7 +214,7 @@ export default function TerminalContact() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="p-6 rounded-2xl border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md flex-grow flex flex-col justify-between shadow-2xl relative overflow-hidden min-h-[260px] w-full"
+              className="sheen card-glow p-6 rounded-2xl border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md flex-grow flex flex-col justify-between shadow-2xl relative overflow-hidden min-h-[260px] w-full"
             >
               {/* Scanline pattern */}
               <div className="absolute inset-0 bg-cyber-grid-pattern bg-[size:15px_15px] opacity-[0.02]" />
@@ -266,7 +266,7 @@ export default function TerminalContact() {
                 <div
                   key={idx}
                   onClick={() => handleCopy(meta.val, meta.label)}
-                  className="p-3.5 border border-zinc-800 bg-[#0d0d12]/70 hover:border-zinc-700/80 rounded-xl flex items-center justify-between cursor-pointer transition-all hover:scale-[1.01] group w-full"
+                  className="sheen card-glow p-3.5 border border-zinc-800 bg-[#0d0d12]/70 hover:border-zinc-700/80 rounded-xl flex items-center justify-between cursor-pointer transition-all hover:scale-[1.01] group w-full"
                 >
                   <div className="flex flex-col text-left space-y-1">
                     <span className="font-mono text-[8px] text-zinc-500 uppercase">

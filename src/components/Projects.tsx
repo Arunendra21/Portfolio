@@ -114,7 +114,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
+            className="aurora-text heading-underline font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
           >
             Featured Works
           </motion.h2>
@@ -132,7 +132,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group flex flex-col h-full border border-zinc-800/80 bg-[#0d0d12]/75 hover:border-zinc-700/80 transition-all duration-300 select-none rounded-2xl overflow-hidden hover:scale-[1.01] hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)] shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
+              className="sheen card-glow group flex flex-col h-full border border-zinc-800/80 bg-[#0d0d12]/75 hover:border-zinc-700/80 transition-all duration-300 select-none rounded-2xl overflow-hidden hover:scale-[1.01] hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)] shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
             >
               {/* Media showcase frame */}
               <div className="relative w-full h-[200px] bg-zinc-950 overflow-hidden border-b border-zinc-900">

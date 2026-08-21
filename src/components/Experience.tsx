@@ -85,7 +85,7 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
+            className="aurora-text heading-underline font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
           >
             Career & Research
           </motion.h2>
@@ -132,7 +132,7 @@ export default function Experience() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-                      className="p-6 rounded-2xl border border-zinc-800/80 bg-[#0d0d12]/75 backdrop-blur-md group hover:scale-[1.01] hover:border-zinc-700/80 transition-all duration-350 shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)]"
+                      className="sheen card-glow p-6 rounded-2xl border border-zinc-800/80 bg-[#0d0d12]/75 backdrop-blur-md group hover:scale-[1.01] hover:border-zinc-700/80 transition-all duration-350 shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)]"
                     >
                       {/* Meta header info */}
                       <div className={`flex flex-col mb-4 ${isEven ? "md:items-end" : "md:items-start"}`}>

@@ -136,7 +136,7 @@ export default function Achievements() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
+            className="aurora-text heading-underline font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
           >
             Honors & Contributions
           </motion.h2>
@@ -189,7 +189,7 @@ export default function Achievements() {
                     <div
                       key={ach.id}
                       onClick={() => setExpandedId(isExpanded ? null : ach.id)}
-                      className="p-6 rounded-2xl border border-zinc-800/80 bg-[#0d0d12]/75 backdrop-blur-md cursor-pointer select-none transition-all duration-300 flex flex-col justify-between hover:scale-[1.01] hover:border-zinc-700/80 hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)] shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
+                      className="sheen card-glow p-6 rounded-2xl border border-zinc-800/80 bg-[#0d0d12]/75 backdrop-blur-md cursor-pointer select-none transition-all duration-300 flex flex-col justify-between hover:scale-[1.01] hover:border-zinc-700/80 hover:shadow-[0_12px_40px_rgba(0,0,0,0.6)] shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
                     >
                       <div className="flex flex-col space-y-3">
                         <div className="flex justify-between items-start font-mono text-[8px] text-zinc-500">
@@ -294,7 +294,7 @@ export default function Achievements() {
                   ].map((stat, idx) => (
                     <div
                       key={idx}
-                      className="p-5 rounded-2xl border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md hover:border-zinc-700/80 transition-all flex items-center space-x-4 shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:scale-[1.02]"
+                      className="sheen card-glow p-5 rounded-2xl border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md hover:border-zinc-700/80 transition-all flex items-center space-x-4 shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:scale-[1.02]"
                     >
                       <div className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-850">
                         {stat.icon}

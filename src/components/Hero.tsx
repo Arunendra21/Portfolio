@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Download, Sparkles } from "lucide-react";
 import Image from "next/image";
 
@@ -82,6 +82,33 @@ const MailIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Animated number ticker — eases from 0 up to the target once triggered
+function CountUp({ value, suffix, start }: { value: number; suffix: string; start: boolean }) {
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!start) return;
+    let raf = 0;
+    const duration = 1400;
+    const t0 = performance.now();
+    const tick = (t: number) => {
+      const p = Math.min((t - t0) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      setDisplay(Math.round(eased * value));
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [start, value]);
+
+  return (
+    <>
+      {display}
+      {suffix}
+    </>
+  );
+}
+
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [subIdx, setSubIdx] = useState(0);
@@ -91,6 +118,26 @@ export default function Hero() {
   const [statsLoaded, setStatsLoaded] = useState(false);
   const [resumeSynthesizing, setResumeSynthesizing] = useState(false);
   const [synthesisProgress, setSynthesisProgress] = useState(0);
+
+  // Interactive 3D tilt for the holographic profile frame (spring-smoothed)
+  const tiltX = useMotionValue(0);
+  const tiltY = useMotionValue(0);
+  const springTiltX = useSpring(tiltX, { stiffness: 150, damping: 15, mass: 0.4 });
+  const springTiltY = useSpring(tiltY, { stiffness: 150, damping: 15, mass: 0.4 });
+
+  const handleFrameTilt = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width - 0.5;
+    const py = (e.clientY - rect.top) / rect.height - 0.5;
+    // Max ~10deg tilt, inverted on X for a natural "look toward cursor" feel
+    tiltX.set(-py * 12);
+    tiltY.set(px * 12);
+  };
+
+  const resetFrameTilt = () => {
+    tiltX.set(0);
+    tiltY.set(0);
+  };
 
   // 1. Matrix Code Rain Canvas (Cyan & Purple theme)
   useEffect(() => {
@@ -235,7 +282,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="font-sans font-extrabold text-4xl sm:text-7xl text-white tracking-tight uppercase"
+              className="aurora-text font-sans font-extrabold text-4xl sm:text-7xl text-white tracking-tight uppercase drop-shadow-[0_2px_20px_rgba(0,240,255,0.15)]"
             >
               Arunendra
               <br />
@@ -279,7 +326,7 @@ export default function Hero() {
                 e.preventDefault();
                 document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-6 py-3 rounded-xl bg-white text-zinc-950 font-sans font-semibold text-xs tracking-wider transition-all duration-300 hover:bg-zinc-200 active:scale-[0.98] shadow-[0_4px_12px_rgba(255,255,255,0.15)]"
+              className="px-6 py-3 rounded-xl bg-white text-zinc-950 font-sans font-semibold text-xs tracking-wider transition-all duration-300 hover:bg-zinc-200 hover:-translate-y-0.5 active:scale-[0.98] shadow-[0_4px_12px_rgba(255,255,255,0.15)] hover:shadow-[0_10px_28px_rgba(255,255,255,0.28)]"
             >
               VIEW PROJECTS
             </a>
@@ -289,16 +336,16 @@ export default function Hero() {
                 e.preventDefault();
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-6 py-3 rounded-xl bg-transparent border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white font-sans font-semibold text-xs tracking-wider transition-all duration-300 hover:bg-zinc-900 active:scale-[0.98]"
+              className="px-6 py-3 rounded-xl bg-transparent border border-zinc-800 hover:border-cyber-cyan/50 text-zinc-300 hover:text-white font-sans font-semibold text-xs tracking-wider transition-all duration-300 hover:bg-zinc-900 hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-[0_10px_28px_-8px_rgba(0,240,255,0.4)]"
             >
               GET IN TOUCH
             </a>
             <button
               onClick={triggerResumeSynthesis}
               disabled={resumeSynthesizing}
-              className="px-6 py-3 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white font-sans font-semibold text-xs tracking-wider transition-all duration-300 hover:bg-zinc-800 active:scale-[0.98] flex items-center space-x-2"
+              className="px-6 py-3 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-cyber-purple/50 text-zinc-300 hover:text-white font-sans font-semibold text-xs tracking-wider transition-all duration-300 hover:bg-zinc-800 hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-[0_10px_28px_-8px_rgba(185,35,255,0.4)] flex items-center space-x-2 group"
             >
-              <Download className="w-4 h-4" />
+              <Download className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" />
               <span>{resumeSynthesizing ? `SYNTHESIZING... ${synthesisProgress}%` : "DOWNLOAD RESUME"}</span>
             </button>
           </motion.div>
@@ -322,22 +369,33 @@ export default function Hero() {
                 href={soc.url}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-700 hover:bg-zinc-900 transition-all hover:scale-110"
+                className="icon-pop group/soc relative w-10 h-10 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-cyber-cyan hover:bg-zinc-900"
                 aria-label={soc.label}
               >
                 {soc.icon}
+                {/* Hover tooltip label */}
+                <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md border border-zinc-800 bg-[#0d0d12]/95 px-2.5 py-1 font-mono text-[8px] uppercase tracking-widest text-zinc-300 opacity-0 translate-y-1 transition-all duration-200 group-hover/soc:opacity-100 group-hover/soc:translate-y-0 shadow-[0_4px_16px_rgba(0,0,0,0.5)]">
+                  {soc.label}
+                </span>
               </a>
             ))}
           </motion.div>
         </div>
 
         {/* Right Hand: Interactive Hologram Profile Frame */}
-        <div className="lg:col-span-5 flex justify-center items-center relative select-none">
+        <div className="float-slow lg:col-span-5 flex justify-center items-center relative select-none">
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] rounded-3xl border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md overflow-hidden shadow-2xl group animate-pulse-slow"
+            onMouseMove={handleFrameTilt}
+            onMouseLeave={resetFrameTilt}
+            style={{
+              rotateX: springTiltX,
+              rotateY: springTiltY,
+              transformPerspective: 900,
+            }}
+            className="conic-ring relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] rounded-3xl border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md shadow-2xl group [transform-style:preserve-3d]"
           >
             {/* Profile Avatar Image */}
             <div className="absolute inset-0 p-4 z-10">
@@ -379,12 +437,12 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={statsLoaded ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 * idx }}
-                className="p-4 flex flex-col items-center justify-center border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md rounded-2xl hover:border-zinc-700/80 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+                whileHover={{ y: -6 }}
+                className="sheen card-glow p-4 flex flex-col items-center justify-center border border-zinc-800 bg-[#0d0d12]/75 backdrop-blur-md rounded-2xl hover:border-zinc-700/80 transition-colors duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
               >
                 <span className="font-sans font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
                   {/* High performance ticker counter */}
-                  {stat.value}
-                  {stat.suffix}
+                  <CountUp value={stat.value} suffix={stat.suffix} start={statsLoaded} />
                 </span>
                 <span className="font-mono text-[9px] sm:text-[10px] text-zinc-500 tracking-wider text-center mt-1.5 uppercase">
                   {stat.label}

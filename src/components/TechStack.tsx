@@ -98,7 +98,7 @@ function SkillCard({ skill }: { skill: Skill }) {
           transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
           transformStyle: "preserve-3d",
         }}
-        className="w-full p-6 rounded-2xl border border-zinc-800/80 bg-[#0d0d12]/75 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:border-zinc-700/80 hover:shadow-[0_12px_32px_rgba(0,0,0,0.6)] transition-all duration-200 ease-out select-none group flex flex-col justify-between h-[120px] relative overflow-hidden"
+        className="sheen card-glow w-full p-6 rounded-2xl border border-zinc-800/80 bg-[#0d0d12]/75 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:border-zinc-700/80 hover:shadow-[0_12px_32px_rgba(0,0,0,0.6)] transition-all duration-200 ease-out select-none group flex flex-col justify-between h-[120px] relative overflow-hidden"
       >
         {/* Soft elegant background hover glow */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -170,7 +170,7 @@ export default function TechStack() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-sans font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
+            className="aurora-text heading-underline font-sans font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight"
           >
             Skills & Expertise
           </motion.h2>

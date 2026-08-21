@@ -177,3 +177,198 @@
 .hover-glitch:hover {
   animation: glitch 0.3s linear infinite;
 }
+
+/* ==========================================================================
+   ENHANCEMENT LAYER — reusable motion & hover utilities (2026 refresh)
+   Cohesive cyan→purple engineering aesthetic. No content changes.
+   ========================================================================== */
+
+/* --- Refined glowing scrollbar --- */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f0ff, #6d5cff 55%, #b923ff);
+  border-radius: 3px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00f0ff #030308;
+}
+
+/* --- Aurora animated gradient text (section titles / hero name) --- */
+.aurora-text {
+  background-image: linear-gradient(
+    100deg,
+    #ffffff 0%,
+    #7dd3fc 22%,
+    #a78bfa 44%,
+    #ffffff 66%,
+    #7dd3fc 88%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: aurora-pan 9s linear infinite;
+}
+@keyframes aurora-pan {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* --- Decorative shimmering underline for centered section headers --- */
+.heading-underline {
+  position: relative;
+}
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00f0ff 35%,
+    #b923ff 65%,
+    transparent
+  );
+  background-size: 200% 100%;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.45);
+  animation: underline-shimmer 5s linear infinite;
+}
+@keyframes underline-shimmer {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+/* --- Light sheen sweep on hover (cards) --- */
+.sheen {
+  position: relative;
+  overflow: hidden;
+}
+.sheen::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.09) 45%,
+    rgba(0, 240, 255, 0.06) 55%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: 20;
+}
+.sheen:hover::after {
+  animation: sheen-sweep 0.95s ease;
+}
+@keyframes sheen-sweep {
+  to {
+    left: 170%;
+  }
+}
+
+/* --- Colored glow + border tint on hover (pairs with existing scale) --- */
+.card-glow {
+  transition: box-shadow 0.45s ease, border-color 0.45s ease;
+}
+.card-glow:hover {
+  border-color: rgba(0, 240, 255, 0.4) !important;
+  box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.12),
+    0 22px 55px -18px rgba(0, 240, 255, 0.28),
+    0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Icon chip pop: lifts + glows on hover (social / meta chips) --- */
+.icon-pop {
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.icon-pop:hover {
+  transform: translateY(-4px) scale(1.08);
+  border-color: rgba(0, 240, 255, 0.5) !important;
+  box-shadow: 0 8px 24px -6px rgba(0, 240, 255, 0.4);
+}
+
+/* --- Gentle floating loop (profile frame / accents) --- */
+.float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* --- Conic rotating gradient ring (behind hologram/profile) --- */
+.conic-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(0, 240, 255, 0.5),
+    rgba(185, 35, 255, 0.5),
+    rgba(0, 255, 179, 0.4),
+    rgba(0, 240, 255, 0.5)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin 6s linear infinite;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* --- Scroll-driven top progress bar --- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, #00f0ff, #6d5cff, #b923ff, #00ffb3);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+  z-index: 10000;
+}
+
+/* --- Accessible focus rings --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.6), 0 0 12px rgba(0, 240, 255, 0.3);
+  border-radius: 8px;
+}
+
+/* --- Respect reduced-motion preferences --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
