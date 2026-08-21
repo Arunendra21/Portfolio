@@ -33,7 +33,7 @@ const EXPERIENCE_DATA: ExperienceItem[] = [
     company: "IIIT Vadodara",
     role: "Research Intern",
     location: "Vadodara, India",
-    duration: "Jan 2026 – Present",
+    duration: "Jan 2026 – Jul 2026",
     points: [
       "Formulated and implemented backend-driven computational data workflows.",
       "Optimized complex indexing algorithms to accelerate query retrieval.",

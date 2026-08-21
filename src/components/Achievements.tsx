@@ -24,10 +24,10 @@ const ACHIEVEMENTS: Achievement[] = [
   },
   {
     id: "leetcode",
-    title: "LeetCode 50 Days Badge",
+    title: "LeetCode 100 Days Badge",
     subtitle: "Algorithmic Consistency",
-    duration: "2024",
-    description: "Earned the official 50 Days Badge for solving complex computational data structure and algorithm challenges consistently.",
+    duration: "2025",
+    description: "Solved 150+ problems and earned the official 100 Days Badge for tackling complex data structure and algorithm challenges with sustained daily consistency.",
     tag: "ALGORITHMS",
   },
   {
@@ -45,6 +45,22 @@ const ACHIEVEMENTS: Achievement[] = [
     duration: "2024",
     description: "Merged multiple verified pull requests into various global repositories, supporting open source software expansion.",
     tag: "OPEN SOURCE",
+  },
+  {
+    id: "redis-py",
+    title: "Merged PR — Redis (redis-py)",
+    subtitle: "Redis Python Client",
+    duration: "2025",
+    description: "Authored and landed a merged pull request into redis-py, the official Redis client for Python, contributing to a widely-used production-grade open source library.",
+    tag: "MERGED PR",
+  },
+  {
+    id: "podman-container-libs",
+    title: "Merged PR — Red Hat Podman",
+    subtitle: "container-libs",
+    duration: "2025",
+    description: "Contributed a merged pull request to Red Hat's Podman container-libs, improving the container tooling ecosystem used across enterprise Linux workflows.",
+    tag: "MERGED PR",
   },
   {
     id: "gemini",

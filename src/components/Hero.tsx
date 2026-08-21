@@ -55,6 +55,17 @@ const LeetCodeIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const KaggleIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.336z"/>
+  </svg>
+);
+
 const MailIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
@@ -174,118 +185,19 @@ export default function Hero() {
           clearInterval(progressTimer);
           setTimeout(() => {
             setResumeSynthesizing(false);
-            // Open a futuristic formatted print/text resume screen
-            const resumeWindow = window.open("", "_blank");
-            if (resumeWindow) {
-              resumeWindow.document.write(getResumeHtml());
-              resumeWindow.document.close();
-            }
+            // Download the actual resume PDF
+            const link = document.createElement("a");
+            link.href = "/Arunendra_Tripathi_Resume.pdf";
+            link.download = "Arunendra_Tripathi_Resume.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
           }, 600);
           return 100;
         }
         return prev + 10;
       });
     }, 150);
-  };
-
-  const getResumeHtml = () => {
-    return `
-      <html>
-        <head>
-          <title>Arunendra Tripathi - Synthesized Core Resume</title>
-          <style>
-            body { font-family: monospace; background: #030308; color: #f3f4f6; padding: 40px; margin: 0; line-height: 1.5; }
-            .container { max-width: 800px; margin: 0 auto; border: 1px solid #00f0ff; padding: 30px; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2); background: rgba(8, 8, 21, 0.95); }
-            h1 { font-family: sans-serif; color: #00f0ff; margin-bottom: 5px; text-transform: uppercase; border-bottom: 2px solid #b923ff; padding-bottom: 10px; }
-            .subtitle { color: #b923ff; margin-bottom: 20px; font-weight: bold; }
-            .section-title { color: #00f0ff; text-transform: uppercase; margin-top: 30px; border-bottom: 1px dashed rgba(0, 240, 255, 0.4); padding-bottom: 5px; }
-            .exp-item, .proj-item { margin-bottom: 15px; }
-            .item-header { display: flex; justify-content: space-between; font-weight: bold; color: #00ffb3; }
-            a { color: #00f0ff; text-decoration: none; }
-            a:hover { text-decoration: underline; }
-            .btn-print { background: #00f0ff; color: #030308; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; margin-bottom: 20px; font-family: monospace; }
-            .btn-print:hover { background: #b923ff; color: white; }
-            @media print { .btn-print { display: none; } body { background: white; color: black; padding: 20px; } .container { border: none; box-shadow: none; background: white; color: black; } h1 { border-bottom: 2px solid black; color: black; } .section-title { color: black; border-bottom: 1px dashed black; } .item-header { color: black; } }
-          </style>
-        </head>
-        <body>
-          <div style="max-width: 800px; margin: 0 auto;">
-            <button class="btn-print" onclick="window.print()">[PRINT / SAVE TO PDF]</button>
-          </div>
-          <div class="container">
-            <h1>ARUNENDRA TRIPATHI</h1>
-            <div class="subtitle">SOFTWARE ENGINEER | FULL STACK DEVELOPER | AI ENGINEER</div>
-            <p>
-              <strong>Email:</strong> 9arunendratripathi4826@gmail.com | 
-              <strong>Location:</strong> Prayagraj, India <br/>
-              <strong>GitHub:</strong> <a href="https://github.com/Arunendra21" target="_blank">github.com/Arunendra21</a> | 
-              <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arunendratripathi/" target="_blank">linkedin.com/in/arunendratripathi</a>
-            </p>
-            
-            <div class="section-title">EDUCATION</div>
-            <div class="exp-item" style="margin-top: 10px;">
-              <div class="item-header">
-                <span>IIIT Manipur</span>
-                <span>2023 - 2027</span>
-              </div>
-              <div>B.Tech in Computer Science and Engineering (Specialization in AI & Data Science)</div>
-            </div>
-
-            <div class="section-title">RESEARCH & WORK EXPERIENCE</div>
-            <div class="exp-item" style="margin-top: 10px;">
-              <div class="item-header">
-                <span>Dciphers IT Solutions - Software Engineer Intern</span>
-                <span>May 2026 - Present</span>
-              </div>
-              <div>• Designed and built highly performant, responsive web interfaces and microservice architectures.</div>
-              <div>• Optimized backend API payloads and formulated structured indexing schemas to accelerate query processing.</div>
-            </div>
-            
-            <div class="exp-item">
-              <div class="item-header">
-                <span>IIIT Vadodara - Research Intern</span>
-                <span>Jan 2026 - Present</span>
-              </div>
-              <div>• Formulated data-driven backend workflows and system index optimizers.</div>
-              <div>• Benchmarked and optimized algorithms for deep scalability.</div>
-            </div>
-
-            <div class="exp-item">
-              <div class="item-header">
-                <span>NIT Warangal - Research Intern</span>
-                <span>Dec 2025 - Jan 2026</span>
-              </div>
-              <div>• Modeled advanced computational systems and optimization procedures.</div>
-              <div>• Conducted thorough comparative performance analyses.</div>
-            </div>
-
-            <div class="section-title">TECHNICAL SKILLS</div>
-            <p>
-              <strong>Languages:</strong> JavaScript, TypeScript, C++, Python, HTML, CSS <br/>
-              <strong>Frontend:</strong> React, Next.js, Tailwind CSS <br/>
-              <strong>Backend & DB:</strong> Node.js, Express.js, MongoDB, PostgreSQL, MySQL <br/>
-              <strong>Tools & Cloud:</strong> Git, GitHub, Docker, Linux, GCP, Firebase, Vercel
-            </p>
-
-            <div class="section-title">FLAGSHELF PROJECTS</div>
-            <div class="proj-item" style="margin-top: 10px;">
-              <div class="item-header">
-                <span>CodeOrbit – Coding Performance Dashboard</span>
-                <span>Next.js, Node.js, MongoDB</span>
-              </div>
-              <div>• Aggregates live metrics from LeetCode, GitHub, Codeforces; delivers Groq AI growth insights.</div>
-            </div>
-            <div class="proj-item">
-              <div class="item-header">
-                <span>ScholarSynth – AI Research Analysis Core</span>
-                <span>React, Gemini API, KaTeX</span>
-              </div>
-              <div>• Parses research PDFs using Gemini APIs to output smart quizzes, digests, and math formulas.</div>
-            </div>
-          </div>
-        </body>
-      </html>
-    `;
   };
 
   return (
@@ -387,7 +299,7 @@ export default function Hero() {
               className="px-6 py-3 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white font-sans font-semibold text-xs tracking-wider transition-all duration-300 hover:bg-zinc-800 active:scale-[0.98] flex items-center space-x-2"
             >
               <Download className="w-4 h-4" />
-              <span>{resumeSynthesizing ? `SYNTHESIZING... ${synthesisProgress}%` : "SYNTHESIZE RESUME"}</span>
+              <span>{resumeSynthesizing ? `SYNTHESIZING... ${synthesisProgress}%` : "DOWNLOAD RESUME"}</span>
             </button>
           </motion.div>
 
@@ -401,7 +313,8 @@ export default function Hero() {
             {[
               { icon: <GithubIcon className="w-4 h-4" />, url: "https://github.com/Arunendra21", label: "Github" },
               { icon: <LinkedinIcon className="w-4 h-4" />, url: "https://www.linkedin.com/in/arunendratripathi/", label: "LinkedIn" },
-              { icon: <LeetCodeIcon className="w-4 h-4" />, url: "https://leetcode.com", label: "LeetCode" },
+              { icon: <LeetCodeIcon className="w-4 h-4" />, url: "https://leetcode.com/u/9arunendratripathi4826", label: "LeetCode" },
+              { icon: <KaggleIcon className="w-4 h-4" />, url: "https://www.kaggle.com/arunendratripathi03", label: "Kaggle" },
               { icon: <MailIcon className="w-4 h-4" />, url: "mailto:9arunendratripathi4826@gmail.com", label: "Email" },
             ].map((soc, idx) => (
               <a
