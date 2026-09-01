@@ -7,28 +7,28 @@ import TechSphereWrapper from "./TechSphereWrapper";
 const STRENGTHS = [
   {
     icon: <Terminal className="w-5 h-5 text-blue-400" />,
-    title: "Full Stack Development",
-    desc: "Architecting high-performance client panels and backend architectures using the MERN & Next.js ecosystem.",
+    title: "Go Backend Engineering",
+    desc: "Building high-performance Go + Fiber backends with REST APIs, JWT auth, SNMP integration, and PostgreSQL/TimescaleDB.",
   },
   {
     icon: <Globe className="w-5 h-5 text-indigo-400" />,
-    title: "AI Integration",
-    desc: "Integrating cutting-edge LLMs (Gemini, LLAMA-3) to create intelligent analysis systems and agentic pipelines.",
+    title: "Full Stack Development",
+    desc: "Crafting responsive React and Next.js frontends backed by Node.js and Go services, deployed end to end.",
   },
   {
     icon: <Shield className="w-5 h-5 text-cyan-400" />,
-    title: "Problem Solving",
-    desc: "Strong computer science fundamentals, analytical thinking, and efficient algorithmic models.",
+    title: "AI / ML Research",
+    desc: "CNN-based reversible data hiding, image security, and ML-driven optimization across IIIT Vadodara & NIT Warangal.",
   },
   {
     icon: <Award className="w-5 h-5 text-zinc-300" />,
-    title: "Research & Analysis",
-    desc: "Active academic researcher with internships at NIT Warangal and IIIT Vadodara specializing in optimizations.",
+    title: "LLM & GenAI",
+    desc: "RAG, embeddings, AI agents, and LLM API integration with Groq (LLaMA 3.3) and Google Gemini.",
   },
   {
     icon: <GraduationCap className="w-5 h-5 text-indigo-300" />,
-    title: "Scalable Systems",
-    desc: "Structuring decoupled architectures, robust database synchronization, and scalable cloud deployments.",
+    title: "Problem Solving",
+    desc: "Strong DSA and OOP fundamentals; Kaggle Silver Medalist in AI Agent Security and an active open source contributor.",
   },
 ];
 
@@ -84,12 +84,13 @@ export default function About() {
                 <span>Academic Overview</span>
               </h3>
               <p className="text-zinc-300 text-sm leading-relaxed mb-4">
-                Currently pursuing a <strong>B.Tech in Computer Science and Engineering</strong> (specializing in 
-                Artificial Intelligence & Data Science) at <strong>IIIT Manipur</strong> (Indian Institute of Information Technology, Manipur).
+                Currently pursuing a <strong>B.Tech in Computer Science and Engineering</strong> at
+                <strong> IIIT Manipur</strong> (Indian Institute of Information Technology, Manipur), with coursework in
+                Data Structures &amp; Algorithms, Machine Learning, Computer Vision, Operating Systems, DBMS, and Computer Networks.
               </p>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Passionate about core system engineering, backend data workflow optimization, and building secure full-stack applications. 
-                Constantly exploring the frontiers of open-source projects, modern technology frameworks, and mathematical algorithms.
+                I split my time between shipping production backends in Go and doing AI/ML research on reversible data hiding
+                and optimization. Along the way I contribute to open source (Redis, Red Hat Podman) and compete on Kaggle.
               </p>
             </motion.div>
 
@@ -102,11 +103,11 @@ export default function About() {
               className="grid grid-cols-1 md:grid-cols-2 gap-4"
             >
               <div className="p-4 border border-zinc-800/80 bg-zinc-900/40 rounded-xl font-mono text-[10px] text-zinc-300 tracking-wider flex items-center justify-between hover:border-zinc-700/80 transition-colors">
-                <span>ACADEMICS: CSE (AI & DS)</span>
+                <span>ACADEMICS: B.TECH CSE</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
               </div>
               <div className="p-4 border border-zinc-800/80 bg-zinc-900/40 rounded-xl font-mono text-[10px] text-zinc-300 tracking-wider flex items-center justify-between hover:border-zinc-700/80 transition-colors">
-                <span>INTERESTS: SYSTEMS OPTIMIZATION</span>
+                <span>FOCUS: GO BACKEND + AI/ML</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
               </div>
             </motion.div>

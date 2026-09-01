@@ -262,6 +262,7 @@ export default function TerminalContact() {
             <div className="flex flex-col space-y-3 w-full">
               {[
                 { label: "Email Address", val: "9arunendratripathi4826@gmail.com" },
+                { label: "Phone", val: "+91-6307601115" },
               ].map((meta, idx) => (
                 <div
                   key={idx}

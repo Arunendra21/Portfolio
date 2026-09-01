@@ -22,25 +22,26 @@ const shareTech = Share_Tech_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arunendra Tripathi | AI Developer & Full Stack Software Engineer",
-  description: "Step into the futuristic command center portfolio of Arunendra Tripathi. Full Stack Software Engineer, Research Intern (IIIT Vadodara, NIT Warangal), and AI Builder specializing in Next.js, MERN Stack, and Intelligent Systems.",
+  title: "Arunendra Tripathi | Full Stack & Go Engineer, AI/ML Researcher",
+  description: "Portfolio of Arunendra Tripathi — Full Stack & Go (Golang) Software Engineer, AI/ML Research Intern (IIIT Vadodara, NIT Warangal), and Kaggle Silver Medalist. Building high-performance Go + Fiber backends, React/Next.js frontends, and AI systems.",
   keywords: [
     "Arunendra Tripathi",
     "Software Engineer",
     "Full Stack Developer",
-    "AI Engineer",
+    "Go Developer",
+    "Golang Backend Engineer",
+    "AI ML Researcher",
+    "Kaggle Silver Medalist",
     "IIIT Manipur",
     "Research Intern",
     "Next.js Portfolio",
-    "Cyberpunk Portfolio",
-    "Web Developer Portfolio",
-    "Systems Engineer"
+    "Reversible Data Hiding"
   ],
   authors: [{ name: "Arunendra Tripathi" }],
   metadataBase: new URL("https://arunendra.dev"),
   openGraph: {
-    title: "Arunendra Tripathi | AI Developer & Full Stack Software Engineer",
-    description: "Futuristic interactive command center portfolio of Arunendra Tripathi.",
+    title: "Arunendra Tripathi | Full Stack & Go Engineer, AI/ML Researcher",
+    description: "Full Stack & Go Software Engineer, AI/ML Research Intern, and Kaggle Silver Medalist.",
     url: "https://arunendra.dev",
     siteName: "Arunendra Tripathi Portfolio",
     locale: "en_US",

@@ -15,11 +15,19 @@ interface Achievement {
 
 const ACHIEVEMENTS: Achievement[] = [
   {
-    id: "girlscript",
-    title: "GirlScript Summer of Code",
-    subtitle: "Open Source Contributor",
+    id: "kaggle",
+    title: "Kaggle Silver Medalist",
+    subtitle: "AI Agent Security Competition",
+    duration: "2025",
+    description: "Earned a Silver Medal in the \"AI Agent Security: Multi-Step Tool Attacks\" competition, red-teaming agentic systems against adaptive multi-step exploits.",
+    tag: "AI SECURITY",
+  },
+  {
+    id: "redis",
+    title: "Redis OSS Contributor",
+    subtitle: "Redis Python Client",
     duration: "2024",
-    description: "Contributed to core frontend repositories, refactored components, and resolved critical repository issues during the summer program.",
+    description: "Merged pull requests into the official Redis Python client, contributing bug fixes and improvements to a widely-used open source library.",
     tag: "OPEN SOURCE",
   },
   {
@@ -34,8 +42,8 @@ const ACHIEVEMENTS: Achievement[] = [
     id: "mckinsey",
     title: "McKinsey Virtual Experience",
     subtitle: "Strategy Consulting Program",
-    duration: "2024",
-    description: "Completed strategic corporate simulation analyzing operational workflows, market entries, and digital models.",
+    duration: "2025",
+    description: "Completed the McKinsey & Company Virtual Experience Program, solving real-world consulting case problems using structured, data-driven approaches.",
     tag: "STRATEGY",
   },
   {
@@ -256,7 +264,7 @@ export default function Achievements() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-zinc-900 pb-3">
                     <span className="font-mono text-[10px] text-zinc-300 font-bold tracking-wider flex items-center gap-1.5">
                       <Flame className="w-3.5 h-3.5 text-orange-500 animate-pulse" />
-                      CONTRIBUTION CORE // @arunendra
+                      CONTRIBUTION CORE // @Arunendra21
                     </span>
                     <span className="font-mono text-[9px] text-zinc-500 tracking-wider">
                       842+ COMMITS SYNCED THIS CYCLE

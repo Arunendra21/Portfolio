@@ -9,17 +9,17 @@ import Image from "next/image";
 const SUBTITLES = [
   "Software Engineer",
   "Full Stack Developer",
-  "AI Builder",
-  "Problem Solver",
-  "Open Source Contributor"
+  "Go Backend Engineer",
+  "AI / ML Researcher",
+  "Kaggle Silver Medalist"
 ];
 
 // Stats metrics
 const STATS = [
-  { label: "PRs Merged", value: 100, suffix: "+" },
-  { label: "Projects Built", value: 15, suffix: "+" },
-  { label: "Research Internships", value: 2, suffix: "" },
-  { label: "Tech Skills Learned", value: 25, suffix: "+" },
+  { label: "Research Internships", value: 3, suffix: "" },
+  { label: "Flagship Projects", value: 3, suffix: "+" },
+  { label: "Kaggle Medal", value: 1, suffix: "🥈" },
+  { label: "Tech Skills", value: 30, suffix: "+" },
 ];
 
 const GithubIcon = ({ className }: { className?: string }) => (
@@ -308,9 +308,10 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-white/70 max-w-xl text-sm sm:text-base leading-relaxed"
           >
-            Undergraduate CSE (AI & Data Science) student at IIIT Manipur. Research-driven
-            Software Engineer specializing in AI pipeline engineering, MERN databases,
-            and computational systems optimization. Drawing blueprints for the future of intelligent products.
+            Computer Science undergraduate at IIIT Manipur. I build high-performance
+            Go + Fiber backends and React/Next.js frontends, and research CNN-based
+            reversible data hiding and ML-driven optimization across IIIT Vadodara
+            and NIT Warangal. Kaggle Silver Medalist in AI Agent Security.
           </motion.p>
 
           {/* CTAs and Resume synthesis button */}
@@ -360,8 +361,8 @@ export default function Hero() {
             {[
               { icon: <GithubIcon className="w-4 h-4" />, url: "https://github.com/Arunendra21", label: "Github" },
               { icon: <LinkedinIcon className="w-4 h-4" />, url: "https://www.linkedin.com/in/arunendratripathi/", label: "LinkedIn" },
-              { icon: <LeetCodeIcon className="w-4 h-4" />, url: "https://leetcode.com/u/9arunendratripathi4826", label: "LeetCode" },
               { icon: <KaggleIcon className="w-4 h-4" />, url: "https://www.kaggle.com/arunendratripathi03", label: "Kaggle" },
+              { icon: <LeetCodeIcon className="w-4 h-4" />, url: "https://leetcode.com/u/9arunendratripathi4826", label: "LeetCode" },
               { icon: <MailIcon className="w-4 h-4" />, url: "mailto:9arunendratripathi4826@gmail.com", label: "Email" },
             ].map((soc, idx) => (
               <a

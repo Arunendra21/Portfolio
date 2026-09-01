@@ -6,53 +6,63 @@ import { Cpu } from "lucide-react";
 
 interface Skill {
   name: string;
-  category: "frontend" | "backend" | "database" | "languages" | "tools";
+  category: "languages" | "aiml" | "web" | "database" | "tools";
   level: number;
   grade: "EXPERT" | "PROFICIENT" | "INTERMEDIATE";
 }
 
 const SKILLS: Skill[] = [
-  // Frontend
-  { name: "React", category: "frontend", level: 95, grade: "EXPERT" },
-  { name: "Next.js", category: "frontend", level: 90, grade: "EXPERT" },
-  { name: "Tailwind CSS", category: "frontend", level: 95, grade: "EXPERT" },
-  { name: "HTML", category: "frontend", level: 95, grade: "EXPERT" },
-  { name: "CSS", category: "frontend", level: 90, grade: "EXPERT" },
-  { name: "TypeScript", category: "frontend", level: 85, grade: "PROFICIENT" },
+  // Languages
+  { name: "Python", category: "languages", level: 90, grade: "EXPERT" },
+  { name: "Go (Golang)", category: "languages", level: 85, grade: "PROFICIENT" },
+  { name: "C++", category: "languages", level: 85, grade: "PROFICIENT" },
+  { name: "C", category: "languages", level: 80, grade: "PROFICIENT" },
+  { name: "JavaScript", category: "languages", level: 90, grade: "EXPERT" },
+  { name: "TypeScript", category: "languages", level: 88, grade: "PROFICIENT" },
+  { name: "SQL", category: "languages", level: 85, grade: "PROFICIENT" },
 
-  // Backend
-  { name: "Node.js", category: "backend", level: 90, grade: "EXPERT" },
-  { name: "Express.js", category: "backend", level: 90, grade: "EXPERT" },
-  { name: "REST APIs", category: "backend", level: 95, grade: "EXPERT" },
-  { name: "Authentication", category: "backend", level: 85, grade: "PROFICIENT" },
+  // AI / ML & GenAI
+  { name: "Machine Learning", category: "aiml", level: 88, grade: "PROFICIENT" },
+  { name: "Computer Vision", category: "aiml", level: 85, grade: "PROFICIENT" },
+  { name: "PyTorch", category: "aiml", level: 85, grade: "PROFICIENT" },
+  { name: "TensorFlow", category: "aiml", level: 80, grade: "PROFICIENT" },
+  { name: "Scikit-learn", category: "aiml", level: 88, grade: "PROFICIENT" },
+  { name: "NumPy / Pandas", category: "aiml", level: 90, grade: "EXPERT" },
+  { name: "RAG & Embeddings", category: "aiml", level: 85, grade: "PROFICIENT" },
+  { name: "AI Agents", category: "aiml", level: 85, grade: "PROFICIENT" },
+  { name: "LangChain / LangGraph", category: "aiml", level: 82, grade: "PROFICIENT" },
+  { name: "LlamaIndex", category: "aiml", level: 78, grade: "INTERMEDIATE" },
+  { name: "Prompt Engineering", category: "aiml", level: 90, grade: "EXPERT" },
+
+  // Web & Backend
+  { name: "React.js", category: "web", level: 92, grade: "EXPERT" },
+  { name: "Next.js", category: "web", level: 90, grade: "EXPERT" },
+  { name: "Node.js", category: "web", level: 88, grade: "PROFICIENT" },
+  { name: "Express.js", category: "web", level: 88, grade: "PROFICIENT" },
+  { name: "Fiber (Go)", category: "web", level: 82, grade: "PROFICIENT" },
+  { name: "Tailwind CSS", category: "web", level: 92, grade: "EXPERT" },
+  { name: "REST APIs", category: "web", level: 90, grade: "EXPERT" },
+  { name: "JWT Auth", category: "web", level: 88, grade: "PROFICIENT" },
 
   // Database
-  { name: "MongoDB", category: "database", level: 90, grade: "EXPERT" },
-  { name: "PostgreSQL", category: "database", level: 80, grade: "PROFICIENT" },
-  { name: "MySQL", category: "database", level: 85, grade: "PROFICIENT" },
-
-  // Languages
-  { name: "JavaScript", category: "languages", level: 95, grade: "EXPERT" },
-  { name: "Python", category: "languages", level: 85, grade: "PROFICIENT" },
-  { name: "C++", category: "languages", level: 80, grade: "PROFICIENT" },
+  { name: "PostgreSQL", category: "database", level: 85, grade: "PROFICIENT" },
+  { name: "TimescaleDB", category: "database", level: 78, grade: "INTERMEDIATE" },
+  { name: "MongoDB", category: "database", level: 88, grade: "PROFICIENT" },
+  { name: "Vector Databases", category: "database", level: 80, grade: "PROFICIENT" },
 
   // Tools
   { name: "Git", category: "tools", level: 90, grade: "EXPERT" },
   { name: "GitHub", category: "tools", level: 90, grade: "EXPERT" },
-  { name: "Docker", category: "tools", level: 75, grade: "INTERMEDIATE" },
-  { name: "Linux", category: "tools", level: 85, grade: "PROFICIENT" },
-  { name: "Postman", category: "tools", level: 90, grade: "EXPERT" },
-  { name: "Google Cloud", category: "tools", level: 70, grade: "INTERMEDIATE" },
-  { name: "Firebase", category: "tools", level: 85, grade: "PROFICIENT" },
-  { name: "Vercel", category: "tools", level: 90, grade: "EXPERT" },
+  { name: "Docker", category: "tools", level: 80, grade: "PROFICIENT" },
+  { name: "SNMP", category: "tools", level: 78, grade: "INTERMEDIATE" },
 ];
 
 const CATEGORIES = [
   { id: "all", label: "ALL" },
-  { id: "frontend", label: "FRONTEND" },
-  { id: "backend", label: "BACKEND" },
-  { id: "database", label: "DATABASES" },
   { id: "languages", label: "LANGUAGES" },
+  { id: "aiml", label: "AI / ML" },
+  { id: "web", label: "WEB & BACKEND" },
+  { id: "database", label: "DATABASES" },
   { id: "tools", label: "TOOLS" },
 ];
 
