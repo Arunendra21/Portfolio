@@ -16,7 +16,7 @@ interface Achievement {
 const ACHIEVEMENTS: Achievement[] = [
   {
     id: "spaceship-titanic",
-    title: "Kaggle — Spaceship Titanic",
+    title: "Kaggle - Spaceship Titanic",
     subtitle: "Rank 428 of 1,719 · Best Score 0.80640",
     duration: "2026",
     description: "Ran a 10-version, score-driven ML iteration (LightGBM, soft-voting ensembles, stacking, MLP and SVM blends) on Kaggle's Spaceship Titanic, finishing at rank 428 of 1,719 teams with a best public score of 0.80640.",
@@ -25,7 +25,7 @@ const ACHIEVEMENTS: Achievement[] = [
   {
     id: "rdh-series",
     title: "31 Research Paper Reproductions",
-    subtitle: "Reversible Data Hiding — RDH / RDHEI Series",
+    subtitle: "Reversible Data Hiding - RDH / RDHEI Series",
     duration: "2026",
     description: "Reproduced 31 peer-reviewed reversible data hiding papers from IEEE, Elsevier and Springer journals as working Python implementations, each published as its own public repository.",
     tag: "RESEARCH",
@@ -34,7 +34,7 @@ const ACHIEVEMENTS: Achievement[] = [
     id: "oss-prs",
     title: "66 Open-Source PRs Authored",
     subtitle: "22 Merged Across Global Projects",
-    duration: "2024 – 2026",
+    duration: "2024 - 2026",
     description: "Authored 66 pull requests across open-source projects with 22 merged, and 9 more currently awaiting maintainer review (verified October 2026).",
     tag: "OPEN SOURCE",
   },
@@ -80,7 +80,7 @@ const ACHIEVEMENTS: Achievement[] = [
   },
   {
     id: "redis-py",
-    title: "Merged PR — Redis (redis-py)",
+    title: "Merged PR - Redis (redis-py)",
     subtitle: "Redis Python Client",
     duration: "2025",
     description: "Authored and landed a merged pull request into redis-py, the official Redis client for Python, contributing to a widely-used production-grade open source library.",
@@ -88,7 +88,7 @@ const ACHIEVEMENTS: Achievement[] = [
   },
   {
     id: "podman-container-libs",
-    title: "Merged PR — Red Hat Podman",
+    title: "Merged PR - Red Hat Podman",
     subtitle: "container-libs",
     duration: "2025",
     description: "Contributed a merged pull request to Red Hat's Podman container-libs, improving the container tooling ecosystem used across enterprise Linux workflows.",

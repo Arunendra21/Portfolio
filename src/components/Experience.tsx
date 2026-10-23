@@ -19,7 +19,7 @@ const EXPERIENCE_DATA: ExperienceItem[] = [
     company: "Vandana Travel Experts",
     role: "Full Stack Developer Intern",
     location: "India",
-    duration: "Aug 2026 – Sep 2026",
+    duration: "Aug 2026 - Sep 2026",
     points: [
       "Built Node.js serverless APIs backed by PostgreSQL (Neon) and deployed on Vercel for the travel platform.",
       "Rebuilt the Vandana Travel Experts website as a modern, responsive site with HTML, CSS and JavaScript.",
@@ -31,7 +31,7 @@ const EXPERIENCE_DATA: ExperienceItem[] = [
     company: "Dciphers IT Solutions (P) Ltd.",
     role: "Software Development Intern",
     location: "Greater Noida, India",
-    duration: "May 2026 – Jul 2026",
+    duration: "May 2026 - Jul 2026",
     points: [
       "Built robust backend services in Go (Golang) for the core monitoring engine, enabling automated device discovery across Fortinet firewalls and Wi-Fi networks with real-time metric monitoring.",
       "Designed responsive UIs for the Database Access Management System and developed the Forms Management module for the Dciphers corporate website.",
@@ -43,9 +43,9 @@ const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     id: 2,
     company: "IIIT Vadodara",
-    role: "Research Intern — RDH & Image Security",
+    role: "Research Intern - RDH & Image Security",
     location: "Vadodara, India",
-    duration: "Jan 2026 – Jul 2026",
+    duration: "Jan 2026 - Jul 2026",
     points: [
       "Developed CNN-based prediction models for Reversible Data Hiding (RDH) using Cross and Dot partitioning techniques.",
       "Benchmarked CNNP against DP, MEDP, GAP, and BIP predictors using MSE and PSNR-based evaluation.",
@@ -56,9 +56,9 @@ const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     id: 3,
     company: "NIT Warangal",
-    role: "Research Intern — Machine Learning",
+    role: "Research Intern - Machine Learning",
     location: "Warangal, India",
-    duration: "Dec 2025 – Jan 2026",
+    duration: "Dec 2025 - Jan 2026",
     points: [
       "Designed and evaluated ML-driven optimization techniques for resource allocation and workload management in fog and cloud computing environments.",
       "Implemented and analyzed Crow Search Algorithm (CSA) variants to improve optimization efficiency across distributed computing scenarios.",

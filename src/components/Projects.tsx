@@ -41,7 +41,7 @@ const PROJECTS: Project[] = [
     id: "worsegpu",
     title: "Worse GPU Allocator",
     tagline: "GPU Memory Allocator Simulator",
-    description: "A dependency-free Python simulator that models GPU memory allocation strategies and their failure modes — fragmentation, oversizing, leaks, and CPU fallback — entirely without CUDA hardware, built for reproducible benchmarking.",
+    description: "A dependency-free Python simulator that models GPU memory allocation strategies and their failure modes - fragmentation, oversizing, leaks, and CPU fallback - entirely without CUDA hardware, built for reproducible benchmarking.",
     features: [
       "Core WorseGPUAllocator with allocate / free, deterministic seeding, and event tracing.",
       "Invariant validation for reproducible, verifiable benchmarking.",
@@ -58,7 +58,7 @@ const PROJECTS: Project[] = [
     id: "moneymitra",
     title: "MoneyMitra",
     tagline: "Voice-for-Bharat Financial Voice Agent with Persistent Memory",
-    description: "A financial voice agent built on LiveKit with Murf Falcon TTS, Deepgram STT and Google Gemini that remembers callers between calls — with their explicit consent — greeting returning callers by name and picking up where they left off.",
+    description: "A financial voice agent built on LiveKit with Murf Falcon TTS, Deepgram STT and Google Gemini that remembers callers between calls - with their explicit consent - greeting returning callers by name and picking up where they left off.",
     features: [
       "Persistent SQLite caller memory that survives restarts.",
       "Function-tool based caller lookup and save, not prompt-based memory.",
@@ -74,13 +74,13 @@ const PROJECTS: Project[] = [
   {
     id: "clairoute",
     title: "clairoute",
-    tagline: "Cost-Optimising LLM Router — Published on PyPI",
+    tagline: "Cost-Optimising LLM Router - Published on PyPI",
     description: "A Python library that routes each prompt to the cheapest LLM that can handle it and automatically escalates to a stronger model only when the cheap answer looks weak. Works with Anthropic Claude and local Ollama models, with a zero-dependency core, and is published on PyPI.",
     features: [
       "Per-prompt routing across Claude Haiku, Sonnet and Opus tiers.",
       "Automatic escalation when a cheap model's answer looks weak.",
       "Ollama backend for free, offline, local-model routing.",
-      "Zero-dependency core — installable via pip install clairoute."
+      "Zero-dependency core - installable via pip install clairoute."
     ],
     tech: ["Python", "Anthropic Claude", "Ollama", "PyPI"],
     image: "/clairoute.jpg",
@@ -90,11 +90,11 @@ const PROJECTS: Project[] = [
   },
   {
     id: "imdb-rnn",
-    title: "IMDB Sentiment Analysis — SimpleRNN",
-    tagline: "Deep Learning Sentiment Classifier — Live on Streamlit",
+    title: "IMDB Sentiment Analysis - SimpleRNN",
+    tagline: "Deep Learning Sentiment Classifier - Live on Streamlit",
     description: "Sentiment analysis of IMDB movie reviews with a SimpleRNN built in Keras/TensorFlow, including the full training pipeline, the trained model, and a live Streamlit app. Measured accuracy of 80.30% on the full 25,000-review IMDB test set.",
     features: [
-      "Embedding (10,000 vocab to 128-d) plus a 128-unit SimpleRNN — 1.31M parameters.",
+      "Embedding (10,000 vocab to 128-d) plus a 128-unit SimpleRNN - 1.31M parameters.",
       "Measured 80.30% accuracy on the full 25,000-review IMDB test set.",
       "Training pipeline with early stopping and a native .keras trained model.",
       "Live interactive Streamlit demo for real-time sentiment predictions."
@@ -107,12 +107,12 @@ const PROJECTS: Project[] = [
   },
   {
     id: "next-word-lstm",
-    title: "Next Word Prediction — LSTM",
-    tagline: "LSTM + GRU Language Model on Hamlet — Run in Google Colab",
+    title: "Next Word Prediction - LSTM",
+    tagline: "LSTM + GRU Language Model on Hamlet - Run in Google Colab",
     description: "Next-word prediction trained on Shakespeare's Hamlet using LSTM and GRU networks, with early stopping and a fully-run public Google Colab notebook, trained models, and a Streamlit app.",
     features: [
       "LSTM and GRU sequence models trained on the full Hamlet text.",
-      "Early stopping — LSTM best val_loss 6.7649, GRU best val_loss 6.8113.",
+      "Early stopping - LSTM best val_loss 6.7649, GRU best val_loss 6.8113.",
       "Fully executed public Google Colab notebook, cell by cell.",
       "Trained .h5 models and a Streamlit app included in the repository."
     ],
@@ -129,7 +129,7 @@ const PROJECTS: Project[] = [
     description: "A voice-based AI companion for senior care: an elderly person talks in their own language, WarmLine replies warmly in the same language, reads the emotional tone of each turn, and generates a short daily update for the family.",
     features: [
       "Browser Web Speech API for low-latency speech-to-text and text-to-speech.",
-      "Language auto-follow — replies in the language spoken, with matching TTS voice.",
+      "Language auto-follow - replies in the language spoken, with matching TTS voice.",
       "Structured JSON output (reply, language, emotion) parsed defensively.",
       "Graceful offline fallback so the companion never leaves a dead line."
     ],

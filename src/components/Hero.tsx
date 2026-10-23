@@ -82,7 +82,7 @@ const MailIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Animated number ticker — eases from 0 up to the target once triggered
+// Animated number ticker - eases from 0 up to the target once triggered
 function CountUp({ value, suffix, start }: { value: number; suffix: string; start: boolean }) {
   const [display, setDisplay] = useState(0);
 

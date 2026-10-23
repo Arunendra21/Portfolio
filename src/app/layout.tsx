@@ -23,7 +23,7 @@ const shareTech = Share_Tech_Mono({
 
 export const metadata: Metadata = {
   title: "Arunendra Tripathi | Full Stack & Go Engineer, AI/ML Researcher",
-  description: "Portfolio of Arunendra Tripathi — Full Stack & Go (Golang) Software Engineer, AI/ML Research Intern (IIIT Vadodara, NIT Warangal), and Kaggle Bronze Medalist. Building high-performance Go + Fiber backends, React/Next.js frontends, and AI systems.",
+  description: "Portfolio of Arunendra Tripathi - Full Stack & Go (Golang) Software Engineer, AI/ML Research Intern (IIIT Vadodara, NIT Warangal), and Kaggle Bronze Medalist. Building high-performance Go + Fiber backends, React/Next.js frontends, and AI systems.",
   keywords: [
     "Arunendra Tripathi",
     "Software Engineer",
