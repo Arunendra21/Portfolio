@@ -49,8 +49,7 @@ const PROJECTS: Project[] = [
       "ruff / mypy static checks, documented via an SRS and threat model."
     ],
     tech: ["Python", "unittest", "ruff", "mypy"],
-    image: "/worsegpu.png",
-    isBlueprint: true,
+    image: "/worsegpu.jpg",
     architecture: "WorseGPUAllocator Core <--> Event Tracer & Invariant Validator <--> CLI + Benchmark Harness",
     github: "https://github.com/Arunendra21/worse-gpu-allocator",
     demo: "https://github.com/Arunendra21/worse-gpu-allocator",
@@ -67,8 +66,7 @@ const PROJECTS: Project[] = [
       "Personalised greeting for returning callers identified by mobile number."
     ],
     tech: ["Python", "LiveKit", "Google Gemini", "Deepgram", "Murf TTS", "SQLite"],
-    image: "/worsegpu.png",
-    isBlueprint: true,
+    image: "/moneymitra.jpg",
     architecture: "Caller Voice <--> LiveKit + Deepgram STT <--> Gemini Agent + Murf TTS <--> SQLite Caller Memory",
     github: "https://github.com/Arunendra21/moneymitra-voice-agent",
     demo: "https://github.com/Arunendra21/moneymitra-voice-agent",
@@ -85,8 +83,7 @@ const PROJECTS: Project[] = [
       "Zero-dependency core — installable via pip install clairoute."
     ],
     tech: ["Python", "Anthropic Claude", "Ollama", "PyPI"],
-    image: "/worsegpu.png",
-    isBlueprint: true,
+    image: "/clairoute.jpg",
     architecture: "Prompt <--> Difficulty Router <--> Claude Haiku / Sonnet / Opus or Local Ollama Models",
     github: "https://github.com/Arunendra21/clairoute",
     demo: "https://pypi.org/project/clairoute/",
@@ -103,8 +100,7 @@ const PROJECTS: Project[] = [
       "Live interactive Streamlit demo for real-time sentiment predictions."
     ],
     tech: ["Python", "TensorFlow", "Keras", "SimpleRNN", "Streamlit"],
-    image: "/worsegpu.png",
-    isBlueprint: true,
+    image: "/imdb-rnn.jpg",
     architecture: "Review Text <--> Tokeniser + Padding (500) <--> Embedding + SimpleRNN <--> Sigmoid Sentiment Score",
     github: "https://github.com/Arunendra21/imdb-sentiment-analysis-rnn",
     demo: "https://imdb-sentiment-analysis-rnn-tcdwkfqmtpcqnxvesaxbqd.streamlit.app/",
@@ -121,8 +117,7 @@ const PROJECTS: Project[] = [
       "Trained .h5 models and a Streamlit app included in the repository."
     ],
     tech: ["Python", "TensorFlow", "Keras", "LSTM", "GRU", "Google Colab"],
-    image: "/worsegpu.png",
-    isBlueprint: true,
+    image: "/next-word-lstm.jpg",
     architecture: "Hamlet Text <--> Tokeniser + Sequences <--> LSTM / GRU Model <--> Next-Word Probabilities",
     github: "https://github.com/Arunendra21/next-word-prediction-lstm-gru",
     demo: "https://colab.research.google.com/drive/1cg0Rs1vcje7qMKQfhyAW7jn8cPVKLbq3",
@@ -139,8 +134,7 @@ const PROJECTS: Project[] = [
       "Graceful offline fallback so the companion never leaves a dead line."
     ],
     tech: ["JavaScript", "Node.js", "Web Speech API", "LLM APIs"],
-    image: "/worsegpu.png",
-    isBlueprint: true,
+    image: "/warmline.jpg",
     architecture: "Browser Voice (Web Speech API) <--> Zero-Dependency Node Server <--> LLM Structured JSON (reply / lang / emotion)",
     github: "https://github.com/Arunendra21/warmline",
     demo: "https://github.com/Arunendra21/warmline",
