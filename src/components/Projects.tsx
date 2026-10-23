@@ -116,7 +116,7 @@ const PROJECTS: Project[] = [
     description: "Next-word prediction trained on Shakespeare's Hamlet using LSTM and GRU networks, with early stopping and a fully-run public Google Colab notebook, trained models, and a Streamlit app.",
     features: [
       "LSTM and GRU sequence models trained on the full Hamlet text.",
-      "Early stopping — best validation loss 6.8198 at epoch 4.",
+      "Early stopping — LSTM best val_loss 6.7649, GRU best val_loss 6.8113.",
       "Fully executed public Google Colab notebook, cell by cell.",
       "Trained .h5 models and a Streamlit app included in the repository."
     ],
@@ -124,8 +124,8 @@ const PROJECTS: Project[] = [
     image: "/worsegpu.png",
     isBlueprint: true,
     architecture: "Hamlet Text <--> Tokeniser + Sequences <--> LSTM / GRU Model <--> Next-Word Probabilities",
-    github: "https://github.com/Arunendra21/next-word-prediction-lstm",
-    demo: "https://colab.research.google.com/drive/1jteFlC11mhbOHgJrvrS1XJAv1s-F3j8g?usp=sharing",
+    github: "https://github.com/Arunendra21/next-word-prediction-lstm-gru",
+    demo: "https://colab.research.google.com/drive/1cg0Rs1vcje7qMKQfhyAW7jn8cPVKLbq3",
   },
   {
     id: "warmline",
