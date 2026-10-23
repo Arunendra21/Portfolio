@@ -15,6 +15,30 @@ interface Achievement {
 
 const ACHIEVEMENTS: Achievement[] = [
   {
+    id: "spaceship-titanic",
+    title: "Kaggle — Spaceship Titanic",
+    subtitle: "Rank 428 of 1,719 · Best Score 0.80640",
+    duration: "2026",
+    description: "Ran a 10-version, score-driven ML iteration (LightGBM, soft-voting ensembles, stacking, MLP and SVM blends) on Kaggle's Spaceship Titanic, finishing at rank 428 of 1,719 teams with a best public score of 0.80640.",
+    tag: "KAGGLE / ML",
+  },
+  {
+    id: "rdh-series",
+    title: "31 Research Paper Reproductions",
+    subtitle: "Reversible Data Hiding — RDH / RDHEI Series",
+    duration: "2026",
+    description: "Reproduced 31 peer-reviewed reversible data hiding papers from IEEE, Elsevier and Springer journals as working Python implementations, each published as its own public repository.",
+    tag: "RESEARCH",
+  },
+  {
+    id: "oss-prs",
+    title: "66 Open-Source PRs Authored",
+    subtitle: "22 Merged Across Global Projects",
+    duration: "2024 – 2026",
+    description: "Authored 66 pull requests across open-source projects with 22 merged, and 9 more currently awaiting maintainer review (verified October 2026).",
+    tag: "OPEN SOURCE",
+  },
+  {
     id: "kaggle",
     title: "Kaggle Silver Medalist",
     subtitle: "AI Agent Security Competition",
@@ -295,10 +319,10 @@ export default function Achievements() {
                 {/* Git Statistics Metrics Cards */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {[
-                    { label: "PULL REQUESTS", value: "100+", icon: <GitPullRequest className="w-4 h-4 text-blue-400" /> },
+                    { label: "PULL REQUESTS", value: "66", icon: <GitPullRequest className="w-4 h-4 text-blue-400" /> },
                     { label: "COMMITS SYNCED", value: "842+", icon: <Flame className="w-4 h-4 text-orange-400" /> },
-                    { label: "REPOSITORIES", value: "12", icon: <GitFork className="w-4 h-4 text-emerald-400" /> },
-                    { label: "ACADEMICS READ", value: "15+", icon: <BookOpen className="w-4 h-4 text-purple-400" /> },
+                    { label: "REPOSITORIES", value: "87", icon: <GitFork className="w-4 h-4 text-emerald-400" /> },
+                    { label: "PAPERS REPRODUCED", value: "31", icon: <BookOpen className="w-4 h-4 text-purple-400" /> },
                   ].map((stat, idx) => (
                     <div
                       key={idx}

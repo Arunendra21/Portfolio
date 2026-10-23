@@ -15,6 +15,18 @@ interface ExperienceItem {
 
 const EXPERIENCE_DATA: ExperienceItem[] = [
   {
+    id: 4,
+    company: "Vandana Travel Experts",
+    role: "Full Stack Developer Intern",
+    location: "India",
+    duration: "Aug 2026 – Sep 2026",
+    points: [
+      "Built Node.js serverless APIs backed by PostgreSQL (Neon) and deployed on Vercel for the travel platform.",
+      "Rebuilt the Vandana Travel Experts website as a modern, responsive site with HTML, CSS and JavaScript.",
+    ],
+    icon: <Briefcase className="w-4 h-4 text-emerald-400" />,
+  },
+  {
     id: 1,
     company: "Dciphers IT Solutions (P) Ltd.",
     role: "Software Development Intern",

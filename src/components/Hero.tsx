@@ -16,8 +16,8 @@ const SUBTITLES = [
 
 // Stats metrics
 const STATS = [
-  { label: "Research Internships", value: 3, suffix: "" },
-  { label: "Flagship Projects", value: 3, suffix: "+" },
+  { label: "Internships", value: 4, suffix: "" },
+  { label: "Flagship Projects", value: 8, suffix: "" },
   { label: "Kaggle Medal", value: 1, suffix: "🥈" },
   { label: "Tech Skills", value: 30, suffix: "+" },
 ];
