@@ -40,10 +40,10 @@ const ACHIEVEMENTS: Achievement[] = [
   },
   {
     id: "kaggle",
-    title: "Kaggle Silver Medalist",
+    title: "Kaggle Bronze Medalist",
     subtitle: "AI Agent Security Competition",
     duration: "2025",
-    description: "Earned a Silver Medal in the \"AI Agent Security: Multi-Step Tool Attacks\" competition, red-teaming agentic systems against adaptive multi-step exploits.",
+    description: "Earned a Bronze Medal in the \"AI Agent Security: Multi-Step Tool Attacks\" competition, red-teaming agentic systems against adaptive multi-step exploits.",
     tag: "AI SECURITY",
   },
   {

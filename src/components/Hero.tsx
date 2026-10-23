@@ -11,14 +11,14 @@ const SUBTITLES = [
   "Full Stack Developer",
   "Go Backend Engineer",
   "AI / ML Researcher",
-  "Kaggle Silver Medalist"
+  "Kaggle Bronze Medalist"
 ];
 
 // Stats metrics
 const STATS = [
   { label: "Internships", value: 4, suffix: "" },
   { label: "Flagship Projects", value: 8, suffix: "" },
-  { label: "Kaggle Medal", value: 1, suffix: "🥈" },
+  { label: "Kaggle Medal", value: 1, suffix: "🥉" },
   { label: "Tech Skills", value: 30, suffix: "+" },
 ];
 
@@ -311,7 +311,7 @@ export default function Hero() {
             Computer Science undergraduate at IIIT Manipur. I build high-performance
             Go + Fiber backends and React/Next.js frontends, and research CNN-based
             reversible data hiding and ML-driven optimization across IIIT Vadodara
-            and NIT Warangal. Kaggle Silver Medalist in AI Agent Security.
+            and NIT Warangal. Kaggle Bronze Medalist in AI Agent Security.
           </motion.p>
 
           {/* CTAs and Resume synthesis button */}

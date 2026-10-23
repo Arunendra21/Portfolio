@@ -28,7 +28,7 @@ const STRENGTHS = [
   {
     icon: <GraduationCap className="w-5 h-5 text-indigo-300" />,
     title: "Problem Solving",
-    desc: "Strong DSA and OOP fundamentals; Kaggle Silver Medalist in AI Agent Security and an active open source contributor.",
+    desc: "Strong DSA and OOP fundamentals; Kaggle Bronze Medalist in AI Agent Security and an active open source contributor.",
   },
 ];
 
